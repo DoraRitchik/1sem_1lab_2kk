@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>katusha veselitsya</title>
+	<style>
+		img {
+			width: 200px;
+		}
+		p {
+			font-family: Helvetica;
+		}
+		#qwe {
+			-webkit-transform: rotate(270deg);
+		}
+		</style>
+</head>
+<body>
+	<p>==================== Задание 1 =============================================</p><br />
+
+	<div id="firstTask">
+		<p>Изменение цвета текста при наведении мыши</p>
+	</div>
+
+	<br /><p>==================== Задание 2 =============================================</p><br />
+
+	<div id="secondTask">
+		<p>Изменение размера текста при щелчке мыши</p>
+	</div>
+
+	<br /><p>==================== Задание 3 =============================================</p><br />
+
+	<div>
+		<img src="second.JPG" id="thirdTask" />
+		<p>При нажатии мыши на картинку замена другой картинкой</p>
+	</div>
+
+	<br /><p>==================== Задание 4 =============================================</p><br />
+
+	<div id="fourthTask">
+		<p>При нажатии мыши на текст появление картинки</p>
+	</div>
+
+	<br /><p>==================== Задание 5 =============================================</p><br />
+
+	<img src="fourth.JPG" id="fifthTask">
+	<p>Увеличение размера картинки при наведении мыши на нее</p>
+
+	<br /><p>==================== Задание 6 =============================================</p><br />
+
+	<div>
+		<p id="sixthTask">При двойном щелчке мыши на текст появление рамки</p>
+	</div>
+<script type="text/javascript">
+	let firstElement = document.getElementById("firstTask");
+	firstElement.onmousemove = function () {
+		this.style.color = "blue";
+	}
+	firstElement.onmouseout = function () {
+		this.style.color = "black";
+	}
+
+	let secondElement = document.getElementById("secondTask");
+	secondElement.onclick = function () {
+		this.style.fontSize = "30px";
+	}
+	secondElement.ondblclick = function () {
+		this.style.fontSize = "20px";
+	}
+
+	let thirdElement = document.getElementById("thirdTask");
+	thirdElement.onclick = function () {
+		this.scr = "second.JPG";
+	}
+
+	let fourthElement = document.getElementById("fourthTask");
+	fourthElement.onclick = function () {
+		this.innerHTML = "<img src='first.JPG' id='qwe'/><br><br><p>Появилась картинка!</p>"
+	}
+
+	let fifthElement = document.getElementById("fifthTask");
+	fifthElement.onmouseover = function () {
+		this.style.width = "60%";
+	}
+	fifthElement.onmouseout = function () {
+		this.style.width = "20%";
+	}
+
+	let sithElement = document.getElementById("sixthTask");
+	sithElement.ondblclick = function () {
+		this.style.border = "dashed 5px blue";
+	}
+</script>
+</body>
+</html>
